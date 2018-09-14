@@ -1,0 +1,233 @@
+@charset "utf-8";                  //识别中文注释
+@import "universal";               //引入scss定义的函数
+@import "common";                  //引入通用样式定义文件
+@import "fonticon.css";                //引入字体图标文件
+
+html{
+     height: 100%;
+}
+body{
+     height: 100%;
+     background: url("../images/PC-LoginBack.jpg") no-repeat center;
+}
+
+//主题蓝色
+$color: #7bcbee;
+$color1: #5fa2d3;
+
+//登录框
+.login{
+     width: 480px;
+     padding-top: 160px;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+//登录标题
+.login-title{
+     font-size: 30px;
+     color: #555555;
+     letter-spacing: 15px;
+     text-indent: 15px;
+     text-shadow: 1px 1px 2px #2BB3FF;
+     text-align: center;
+     padding-bottom: 15px;
+}
+
+//登录表单
+.login-form{
+     background: white;
+     padding: 20px 20px 50px 20px;
+     @include radius(10px);
+     @include shadow(1px 0px 3px 1px $color);
+}
+
+//设置表单每项和提示的宽度统一变量
+$form-cell-width: 350px;
+
+//登录表单行
+.login-form-cell{
+     margin-top: 20px;
+     margin-left: auto;
+     margin-right: auto;
+     width: $form-cell-width;
+     @include flexbox;
+     @include align-items(center);
+     @include justify-content(space-between);
+}
+
+//登录表单行字体图标
+.login-form-icon{
+     font-size: 24px;
+     color: $color1;
+}
+
+//登录表单控件
+.login-form-item{
+     @include flex(1, 1);
+     display: inline-block;
+     height: 35px;
+     color: #555555;
+     border: none;
+     border-bottom: 1px $color solid;
+     padding-left: 10px;
+     font-size: 16px;
+     background-color: white;
+     @include radius(0px !important);
+}
+
+//顶部嵌套提示
+.hints{
+    font-size:  16px; 
+    color: red; 
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+//表单验证报错信息
+.hint{
+     margin-left: auto;
+     margin-right: auto;
+     width: $form-cell-width;
+}
+
+//表单验证码输入
+.login-form-code{
+     @include flex(0,0);
+     @include flexbox;
+     width: 40%;
+}
+
+//表单验证码
+.login-form-codeImg{
+     height: 36px;
+     line-height: 36px;
+     text-align: center;
+     width: 30%;
+}
+
+.login-form-label{
+     height: 30px;
+     line-height: 30px;
+}
+
+.login-form-input{
+     display: none;
+     
+     &:checked+.login-form-check{
+          background-color: $color1;
+     }
+     
+     &:checked+.login-form-radio{
+          color: $color1;
+     }
+}
+
+.login-form-check{
+     display: inline-block;
+     width: 16px;
+     height: 16px;
+     border: 1px $color1 solid;
+     color: white;
+     @include radius(3px);
+     cursor: pointer;
+}
+
+.login-form-remeberText{
+     margin-left: 8px;
+     color: #555555;
+     cursor: pointer;
+}
+
+.login-form-cell1{
+     margin-top: 15px;
+     margin-left: auto;
+     margin-right: auto;
+     width: $form-cell-width;
+     @include flexbox;
+     @include flex-flow(row wrap);
+}
+
+.login-form-label1{
+     height: 30px;
+     line-height: 30px;
+     margin-right: 30px;
+     @include flexbox;
+     @include align-items(center);
+}
+
+.login-form-radio{
+     display: inline-block;
+     width: 15px;
+     height: 15px;
+     line-height: 15px;
+     text-align: center;
+     border: 1px $color1 solid;
+     color: white;
+     @include radius(50%);
+     cursor: pointer;
+     font-size: 12px;
+}
+
+.login-form-radioText{
+     margin-left: 8px;
+     color: #555555;
+     cursor: pointer;
+}
+
+@include placeholder-style{
+     color: $color;
+}
+
+.login-form-submit{
+     margin-top: 30px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: $form-cell-width;
+     height: 45px;
+     line-height: 45px;
+     border: none;
+     background-color: $color1;
+     color: white;
+     font-size: 16px;
+     text-align: center;
+     letter-spacing: 8px;
+     text-indent: 8px;
+     @include radius(8px);
+     
+     &:hover{
+          background-color: rgba(99, 169, 220, 0.9);
+     }
+}
+
+@media only screen and ( max-width: 600px ) {
+     body{
+          background: url("../images/Mobile-LoginBack.jpg") no-repeat center;
+     }
+     
+     .login{
+          width: 95%;
+          padding-top: 50px;
+     }
+     
+     .login-form{
+          padding: 30px 30px 60px 30px;
+     }
+     
+     .login-form-cell, .hint, .login-form-cell1, .login-form-submit{
+          width: 100%;
+     }
+     
+     .login-form-cell{
+          margin-top: 30px;
+     }
+     
+     .login-form-code{
+          width: 60%;
+     }
+     
+     .login-form-item{
+          width: 100%;
+     }
+}

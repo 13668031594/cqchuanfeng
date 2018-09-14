@@ -45,6 +45,12 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+
+        'tietongmaster' => [
+            'driver' => 'session',
+            'provider' => 'tietongmasters',
+        ],
     ],
 
     /*
@@ -70,6 +76,11 @@ return [
             'model' => App\User::class,
         ],
 
+
+        'tietongmasters' => [
+            'driver' => 'eloquent',
+            'model' => \App\Models\Tietong\TietongMaster::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
