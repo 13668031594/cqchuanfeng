@@ -110,7 +110,7 @@ class TietongManController extends TietongController implements ListInterface
         return parent::return_ajax(true, ['操作成功']);
     }
 
-    private function arrays()
+    public function arrays()
     {
         return [
             'sex' => [

@@ -80,6 +80,10 @@
                                     class="icon_plus"></span>员工添加</a>
                         <a class="handle-cell handle-delete" href="javascript:;"><span
                                     class="icon_trash_alt"></span>批量删除</a>
+                        <a class="handle-cell handle-add" href="/tietong-man-file"><span
+                                    class="icon_plus"></span>导入</a>
+                        <a class="handle-cell handle-add" href="/tietong-man-down"><span
+                                    ></span>导出</a>
                     @endif
                     {{-- <input class="table-handle-input Wdate" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"
                             type="text" name="begin_time" value="" placeholder="起始时间"/>

@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>刘钰川要的乱七八糟系统</title>
+    <title>重庆川峰通信技术服务有限公司人力资源系统</title>
     <meta charset="UTF-8"/>
     <meta name="viewport"
           content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -33,7 +33,7 @@
 <!-- 登录框 -->
 <div class="login">
     <!-- 登录标题 -->
-    <h5 class="login-title">刘钰川要的乱七八糟系统</h5>
+    <h5 class="login-title">重庆川峰通信技术服务有限公司人力资源系统</h5>
     @if (count($errors) > 0)
         @foreach ($errors->all() as $error)
             <p class="hints"><span class="icon_close_alt" style="color: red"></span>{{$error}}</p>

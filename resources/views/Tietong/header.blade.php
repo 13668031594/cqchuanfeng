@@ -38,7 +38,7 @@
 
 <!-- 顶部 -->
 <div class="header">
-    <div class="logo">啥都没有</div>
+    <div class="logo">重庆川峰通信技术服务有限公司人力资源系统</div>
 
     <ul class="header-handle">
         <li>

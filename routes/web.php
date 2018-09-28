@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function (){
+Route::get('/', function () {
     return redirect('/tietong-man');
 });
 
@@ -37,5 +37,7 @@ Route::group(['middleware' => 'tietong.login'], function () {
     Route::resource('/tietong-man', 'Tietong\TietongManController');
     Route::resource('/tietong-master', 'Tietong\TietongMasterController');
     Route::resource('/tietong-area', 'Tietong\TietongAreaController');
-
+    Route::get('/tietong-man-file', 'Tietong\TietongManFileController@file_view');
+    Route::post('/tietong-man-file', 'Tietong\TietongManFileController@file');
+    Route::get('/tietong-man-down', 'Tietong\TietongManFileController@down');
 });
